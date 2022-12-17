@@ -9,7 +9,6 @@ class BurcDetay extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -22,7 +21,10 @@ class BurcDetay extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: SingleChildScrollView(
-              child: Text(secilenBurc.burcDetayi),
+              child: Text(
+                secilenBurc.burcDetayi,
+                style: Theme.of(context).textTheme.subtitle1,
+              ),
             ),
           )
         ],
