@@ -12,11 +12,14 @@ class BurcDetay extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+
             expandedHeight: 250,
             pinned: true,
             backgroundColor: Colors.pink,
             flexibleSpace: FlexibleSpaceBar(
-              background: Image.asset('images/' + secilenBurc.burcBuyukResin),
+              centerTitle: true,
+              title: Text(secilenBurc.burcAdi+" Burcu ve Özellikleri"),
+              background: Image.asset('images/' + secilenBurc.burcBuyukResin,fit: BoxFit.cover,),
             ),
           ),
           SliverToBoxAdapter(
