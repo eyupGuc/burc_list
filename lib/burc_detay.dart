@@ -10,14 +10,22 @@ class BurcDetay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-        child: Column(
-          children: [
-            Text(secilenBurc.burcAdi),
-            Text(secilenBurc.burcDetayi),
-            Text(secilenBurc.burcTarihi)
-          ],
-        ),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            expandedHeight: 250,
+            pinned: true,
+            backgroundColor: Colors.pink,
+            flexibleSpace: FlexibleSpaceBar(
+              background: Image.asset('images/' + secilenBurc.burcBuyukResin),
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: SingleChildScrollView(
+              child: Text(secilenBurc.burcDetayi),
+            ),
+          )
+        ],
       ),
     );
   }
