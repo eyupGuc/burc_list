@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
 import 'package:horoscope_list/modal/burc.dart';
-import 'package:palette_generator/palette_generator.dart';
+
 
 class BurcDetay extends StatefulWidget {
   final Burc secilenBurc;
@@ -12,13 +12,14 @@ class BurcDetay extends StatefulWidget {
 }
 
 class _BurcDetayState extends State<BurcDetay> {
-  Color appbarRengi = Colors.pink;
-  late PaletteGenerator _generator;
+
+
 
   @override
   void initState() {
-    appbarRenginiBul();
-    //_generator=PaletteGenerator.fromImageProvider(AssetImage(assetName))
+    super.initState();
+
+
     super.initState();
   }
 
@@ -57,10 +58,5 @@ class _BurcDetayState extends State<BurcDetay> {
     );
   }
 
-  void appbarRenginiBul() async {
-    _generator = await PaletteGenerator.fromImageProvider(
-        AssetImage(('images/${widget.secilenBurc.burcBuyukResin}')));
-    appbarRengi=_generator.dominantColor!.color;
-    print(appbarRengi);
-  }
+
 }
