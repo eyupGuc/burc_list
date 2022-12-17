@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:horoscope_list/burc_item.dart';
 import 'package:horoscope_list/data/str.dart';
 
 import 'modal/burc.dart';
@@ -17,7 +18,9 @@ class BurcList extends StatelessWidget {
         title: Text('Burçlar listesi'),
       ),
       body: Center(
-        child: Text('Burç listesi buraya gelecek'),
+        child: ListView.builder(itemBuilder: (context,index){
+          return BurcItem(listelenenBurc: tumBurclar[index]);
+        },itemCount: tumBurclar.length,),
       ),
     );
   }
