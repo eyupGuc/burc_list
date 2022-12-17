@@ -6,4 +6,9 @@ class Burc{
   final String _burcBuyukResin;
 
   Burc(this._burcAdi, this._burcTarihi, this._burcDetayi, this._burcKucukResim, this._burcBuyukResin);
+
+
+  String toString(){
+return '$_burcAdi - $_burcBuyukResin';
+  }
 }
